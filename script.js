@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addTask = document.getElementById('newTask-btn');
     const cardBody = document.getElementById('card');
 
+
     const removeTask = () => {
         if(tasks) {
             tasks.remove();
@@ -47,22 +48,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const modify = document.getElementById('modify');
     const edit = document.getElementById('edit');
 
-    const editar = () => {
-        if(textbox){
-            textbox.style.display = 'none';
-            modify.style.display = 'block';
+    let editing = false;
 
-            const update = (event) => {
-                if(event.key === 'Enter') {
-                    const newContent = modify.value;
-                    textbox.textContent = newContent;
-                }
-            }
-            modify.addEventListener('keydown', update)
-        
-            
+    const trocarModo = () => {
+        if(editing) {
+            textbox.textContent = modify.value;
+            modify.style.display = 'none';
+            textbox.style.display = 'block';
+            edit.textContent = "edit";
+        } else {
+            modify.value = textbox.textContent;
+            modify.style.display = 'block';
+            textbox.style.display = 'none';
+            edit.textContent = 'Save'
         }
-        
+        editing = !editing;
     }
-    edit.addEventListener('click', editar);
+    edit.addEventListener('click', trocarModo);
 })
