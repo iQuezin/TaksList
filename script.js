@@ -66,3 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     edit.addEventListener('click', trocarModo);
 })
+
+// JSON
+
+var tarefas =  {
+    caixaDeChecagem: "",
+    paragrafo: "",
+    botaoEditar: "",
+    botaoSalvar: "",
+    botaoRemover: "",
+};
