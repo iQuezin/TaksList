@@ -32,6 +32,15 @@ header {
     color: black;
     padding: 15px 0 0;
     text-decoration: none;
+    display: block;
+}
+
+#modify {
+    display: none;
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 5px 5px;
+    border-radius: 10px;
 }
 
 #edit {
