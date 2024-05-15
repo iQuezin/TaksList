@@ -7,3 +7,8 @@
             . Remover tarefa;
             . Editar tarefa já criada;
             . Marcar tarefa como concluída.
+    
+    Linguagens utilizadas:
+        HTML;
+        CSS;
+        JavaScript. (Com JSON para armazenamento e gerenciamento de dados).
